@@ -16,7 +16,7 @@ function bike() {
 
 function car() {
     const Maclaren = {
-        Model_name: "Maclaren GT Coupe",
+        Model_name: "Mclaren GT Coupe",
         brand: "Maclaren",
         Fuel_Type: "Petrol",
         Max_Power: " 612 bhp @7500 rpm",
