@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the buttons to see the differences between call(), apply(), and bind():</p>
+    <button onclick="callExample()">call()</button>
+    <button onclick="applyExample()">apply()</button>
+    <button onclick="bindExample()">bind()</button>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = { firstName: "John", lastName: "Doe"};
+        function fullName() {
+            return this.firstName + " " + this.lastName;
+        }
+        function callExample() {
+            const result = fullName.call(person); document.getElementById("demo").innerHTML = result;
+        }
+        function applyExample() {
+            const result = fullName.apply(person); document.getElementById("demo").innerHTML = result;
+        }
+        function bindExample() {
+            const result = fullName.bind(person); document.getElementById("demo").innerHTML = result();
+        }
+    </script>
+
+</body>
+</html>
